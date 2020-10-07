@@ -1,8 +1,8 @@
 package main
 
 import (
+	"github.com/InVisionApp/protoc-gen-tts/tts"
 	pgs "github.com/lyft/protoc-gen-star"
-	"marwan.io/protoc-gen-tts/tts"
 )
 
 func main() {

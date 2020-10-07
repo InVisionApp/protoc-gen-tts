@@ -96,8 +96,10 @@ func (t *tts) createService(s pgs.Service) *serviceData {
 	var sd serviceData
 	sd.Name = s.Name().String()
 	sd.Doc = getDoc(s.SourceCodeInfo().LeadingComments(), 0)
-	sd.PathPrefix = fmt.Sprintf(
-		"/twirp/%s.%s/",
+    sd.PathPrefix = "/twirp"
+	sd.Path = fmt.Sprintf(
+		"%s/%s.%s/",
+        sd.PathPrefix
 		s.Package().ProtoName().String(),
 		sd.Name,
 	)

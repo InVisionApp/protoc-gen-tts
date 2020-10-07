@@ -43,15 +43,17 @@ export interface {{.Name}} {
 export class {{ .Name }}Client implements {{ .Name }} {
   private hostname: string
   private fetch: Fetch
-  private path = '{{ .PathPrefix }}'
+  private pathPrefix: '{{ .PathPrefix }}'
+  private path = '{{ .Path }}'
 
-  constructor(hostname: string, fetch: Fetch) {
+  constructor(hostname: string, fetch: Fetch, pathPrefix: '{{ .PathPrefix }}') {
     this.hostname = hostname
     this.fetch = fetch
+    this.pathPrefix = pathPrefix
   }
 
   private url(name: string): string {
-    return this.hostname + this.path + name
+    return this.hostname + this.pathPrefix + this.path + name
   }
 
   {{ range .Methods }}

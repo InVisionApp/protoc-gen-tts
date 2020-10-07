@@ -6,6 +6,7 @@ type serviceData struct {
 	Name       string
 	Doc        string
 	PathPrefix string
+	Path       string
 	Methods    []*methodData
 }
 

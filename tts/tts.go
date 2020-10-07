@@ -99,7 +99,6 @@ func (t *tts) createService(s pgs.Service) *serviceData {
     sd.PathPrefix = "/twirp"
 	sd.Path = fmt.Sprintf(
 		"/%s.%s/",
-        sd.PathPrefix,
 		s.Package().ProtoName().String(),
 		sd.Name,
 	)

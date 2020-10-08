@@ -43,10 +43,10 @@ export interface {{.Name}} {
 export class {{ .Name }}Client implements {{ .Name }} {
   private hostname: string
   private fetch: Fetch
-  private pathPrefix: '{{ .PathPrefix }}'
+  private pathPrefix: string = '{{ .PathPrefix }}'
   private path = '{{ .Path }}'
 
-  constructor(hostname: string, fetch: Fetch, pathPrefix: '{{ .PathPrefix }}') {
+  constructor(hostname: string, fetch: Fetch, pathPrefix: string = '{{ .PathPrefix }}') {
     this.hostname = hostname
     this.fetch = fetch
     this.pathPrefix = pathPrefix

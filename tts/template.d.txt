@@ -10,7 +10,7 @@ export class {{.Name.UpperCamelCase.String}}TwirpClient {
 {{range .Methods}}
   {{.Name.LowerSnakeCase.String}}(
     request: pb.{{.Input.Name.UpperCamelCase.String}},
-  ): Promise<!pb.{{.Output.Name.UpperCamelCase.String}}>;
+  ): Promise<pb.{{.Output.Name.UpperCamelCase.String}}>;
 {{end}}
 }
 {{end}}

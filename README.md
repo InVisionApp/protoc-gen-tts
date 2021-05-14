@@ -17,3 +17,7 @@ type annotations for the generated JS code.
   in/out types, themselves, must be framed in the local package like
   `rpc Do(DoRequest) returns (DoResponse)`.
 
+- Type annotations for messages are not generated. The workaround for now is to
+  use the grpc-web plugin which can generate annotations for messages. A future
+  patch should add message annotation generation to this project so that it can
+  be a complete Twirp + Typescript tool.

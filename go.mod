@@ -1,4 +1,4 @@
-module marwan.io/protoc-gen-tts
+module github.com/InVisionApp/protoc-gen-tts
 
 go 1.16
 

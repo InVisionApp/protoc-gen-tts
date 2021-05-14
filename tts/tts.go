@@ -1,6 +1,7 @@
 package tts
 
 import (
+	"path"
 	"text/template"
 
 	pgs "github.com/lyft/protoc-gen-star"
@@ -30,9 +31,10 @@ func (t *tts) Execute(targets map[string]pgs.File, pkgs map[string]pgs.Package) 
 	for _, f := range targets {
 		fname := f.Name().LowerSnakeCase().String()
 		fname = fname[:len(fname)-6] // strip _proto from the value.
+		_, protoFileName := path.Split(fname)
 		c := templateContext{
 			File:          f,
-			ProtoFileName: fname,
+			ProtoFileName: protoFileName,
 		}
 		t.AddGeneratorTemplateFile(fname+"_twirp_pb.js", template.Must(template.New("js").Parse(jsTemplate)), c)
 		t.AddGeneratorTemplateFile(fname+"_twirp_pb.d.ts", template.Must(template.New("ts").Parse(tsTemplate)), c)

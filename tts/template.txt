@@ -9,7 +9,7 @@
 
 /* eslint-disable */
 const twirp = require('twirpjs');
-const pb = require('./{{index .Name.Split 0}}_pb.js');
+const pb = require('./{{.ProtoFileName}}_pb.js');
 var scope = {};
 
 {{range .Services}}

@@ -1,7 +1,7 @@
 // GENERATED CODE -- DO NOT EDIT!
 
 import * as twirp from 'twirpjs';
-import * as pb from './{{index .Name.Split 0}}_pb';
+import * as pb from './{{.ProtoFileName}}_pb';
 
 {{range .Services}}
 export class {{.Name.UpperCamelCase.String}}TwirpClient {

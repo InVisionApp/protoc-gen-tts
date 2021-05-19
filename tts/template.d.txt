@@ -1,6 +1,6 @@
 // GENERATED CODE -- DO NOT EDIT!
 
-import * as twirp from 'twirpjs';
+import * as twirp from '@invisionapp/twirpjs';
 import * as pb from './{{.ProtoFileName}}_pb';
 
 {{range .Services}}

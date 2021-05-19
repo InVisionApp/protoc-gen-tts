@@ -8,7 +8,7 @@
 
 
 /* eslint-disable */
-const twirp = require('twirpjs');
+const twirp = require('@invisionapp/twirpjs');
 const pb = require('./{{.ProtoFileName}}_pb.js');
 var scope = {};
 

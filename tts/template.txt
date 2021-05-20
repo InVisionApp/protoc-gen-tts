@@ -35,7 +35,7 @@ scope.{{.Name.UpperCamelCase.String}}TwirpClient =
 * @return {!Promise<!pb.{{.Output.Name.UpperCamelCase.String}}>}
 *     Promise that resolves to the response
 */
-scope.{{$service.Name.UpperCamelCase.String}}TwirpClient.prototype.{{.Name.LowerSnakeCase.String}} =
+scope.{{$service.Name.UpperCamelCase.String}}TwirpClient.prototype.{{.Name.LowerCamelCase.String}} =
     function (request) {
         return this.transport_.call('{{$service.Package.ProtoName.String}}.{{$service.Name.UpperCamelCase.String}}', '{{.Name.UpperCamelCase.String}}', request, pb.{{.Output.Name.UpperCamelCase.String}})
     };

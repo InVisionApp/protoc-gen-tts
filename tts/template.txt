@@ -37,7 +37,7 @@ scope.{{.Name.UpperCamelCase.String}}TwirpClient =
 */
 scope.{{$service.Name.UpperCamelCase.String}}TwirpClient.prototype.{{.Name.LowerSnakeCase.String}} =
     function (request) {
-        return this.transport_.call('{{$service.Package.ProtoName.String}}.{{$service.Name.UpperCamelCase.String}}', '{{.Name.UpperCamelCase.String}}', request, pb.{{$service.Package.ProtoName.String}}.{{.Output.Name.UpperCamelCase.String}})
+        return this.transport_.call('{{$service.Package.ProtoName.String}}.{{$service.Name.UpperCamelCase.String}}', '{{.Name.UpperCamelCase.String}}', request, pb.{{.Output.Name.UpperCamelCase.String}})
     };
 
 {{end}}

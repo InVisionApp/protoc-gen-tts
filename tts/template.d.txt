@@ -8,7 +8,7 @@ export class {{.Name.UpperCamelCase.String}}TwirpClient {
   constructor (transport: twirp.Transport);
 {{$service := .}}
 {{range .Methods}}
-  {{.Name.LowerSnakeCase.String}}(
+  {{.Name.LowerCamelCase.String}}(
     request: pb.{{.Input.Name.UpperCamelCase.String}},
   ): Promise<pb.{{.Output.Name.UpperCamelCase.String}}>;
 {{end}}
